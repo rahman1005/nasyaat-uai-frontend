@@ -4,7 +4,7 @@
                 <li><router-link class="routerlink" to="/">Home</router-link></li>
                 <li><router-link class="routerlink" to="/allevents">All Event</router-link></li>
                 <li><router-link class="routerlink" to="/about">About Us</router-link></li>
-                 <li><a href="/login">Buat Event</a></li>
+                 <li><router-link class="routerlink" to="/login">Buat Event</router-link></li>
                 
                 
             </ul>

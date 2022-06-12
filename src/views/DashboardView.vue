@@ -3,8 +3,8 @@
         <Navbar/>
         <main class="list">
         <div class="button-lembaga">
-            <a href="/inputpost"> <div class="tambah-event"><h1>+Tambah Event</h1></div></a>
-            <a href="/postlembaga"> <div class="tambah-event"><h1>+TambagLembaga</h1></div></a>
+             <router-link class="routerlink" to="/inputpost"><div class="tambah-event"><h1>+Tambah Event</h1></div></router-link>
+             <router-link class="routerlink" to="/postlembaga"> <div class="tambah-event"><h1>+TambagLembaga</h1></div></router-link>
         </div>
           <ListEvent/>
         </main>

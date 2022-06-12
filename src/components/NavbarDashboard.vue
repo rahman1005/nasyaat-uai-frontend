@@ -2,8 +2,8 @@
   <div class="nav-dashboard">
          <nav>
             <ul>
-                <li><a href="/dashboard">All Event</a></li>
-                <li ><a href="/"><button class="button-logout" >Log out</button></a></li>
+                <li><router-link class="routerlink" to="/dashboard">All Event </router-link></li>
+                <li ><router-link class="routerlink" to="/"><button class="button-logout" >Log out</button></router-link></li>
                 
             </ul>
         </nav>

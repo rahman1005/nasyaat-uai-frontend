@@ -4,28 +4,28 @@
         <div class="d-sm-block d-md-none">
             <div class="category-list">
                 <div class="category-item item-color-1">
-                   <a href="/eventsuai"><h2>Events UAI</h2></a> 
+                   <router-link class="routerlink" to="/eventsuai"><h2>Events UAI</h2></router-link> 
                 </div>
                 <div class="category-item item-color-2">
-                   <a href="/eventsormawa"><h2>Events ORMAWA</h2></a> 
+                   <router-link class="routerlink" to="/eventsormawa"><h2>Events ORMAWA</h2></router-link> 
                 </div>
                 <div class="category-item item-color-3">
-                   <a href="/eventsukkm"><h2>Events UKKM</h2></a> 
+                   <router-link class="routerlink" to="/eventsukkm"><h2>Events UKKM</h2></router-link>
                 </div>
             </div>
         </div>
         <div class="d-none d-md-block">
             <div class="category-list-dk">
                 <div class="category-item-dk item-color-1">
-                   <a href="/eventsuai"><div><img src="../assets/img/category.png" alt=""></div></a> 
+                    <router-link class="routerlink" to="/eventsuai"><div><img src="../assets/img/category.png" alt=""></div></router-link>
                     <h2>Events UAI</h2>
                 </div>
                 <div class="category-item-dk item-color-2">
-                    <a href="/eventsormawa"><div><img src="../assets/img/category.png" alt=""></div></a>
+                    <router-link class="routerlink" to="/eventsormawa"><div><img src="../assets/img/category.png" alt=""></div></router-link>
                     <h2>Events ORMAWA</h2>
                 </div>
                 <div class="category-item-dk item-color-3">
-                     <a href="/eventsukkm"><div><img src="../assets/img/category.png" alt=""></div></a>
+                      <router-link class="routerlink" to="/eventsukkm"><div><img src="../assets/img/category.png" alt=""></div></router-link>
                     <h2>Events UKKM</h2>
                 </div>
             </div>
