@@ -73,7 +73,7 @@ export default {
     },
     mounted(){
         axios
-        .post("http://localhost:5000/login")
+        .post("http://localhost:5000/admin")
         .then((response)=> this.setData(response.data))
         .catch((error)=> console.log(error));
 
