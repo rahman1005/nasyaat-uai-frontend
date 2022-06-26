@@ -33,6 +33,8 @@
             <!-- <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="#!"
                 class="link-danger">Register</a></p> -->
           </div>
+
+          <p class="super-admin-router" ><router-link  to="/login">Login Sebagai Super Admin</router-link></p>
         </div>
         </form>
       </div>
@@ -46,7 +48,7 @@
 <script>
 import axios from 'axios';
 export default {
-    name:'login-admin',
+    name:'login-lembaga',
     data(){
         return{
             admin:{},
@@ -76,13 +78,13 @@ export default {
 
         searchdata(){
          axios
-        .get("http://localhost:5000/admin/"+this.input.username)
+        .get("http://localhost:5000/lembaga/"+this.input.username)
         .then((response)=> this.setData(response.data))
         .catch((error)=> console.log(error));
         },
         searchdataps(){
         axios
-        .get("http://localhost:5000/adminps/"+this.input.password)
+        .get("http://localhost:5000/lembagaps/"+this.input.password)
         .then((response)=> this.setDataps(response.data))
         .catch((error)=> console.log(error));
         },
@@ -95,7 +97,7 @@ export default {
           alert('password salah')
         }
         else{
-          this.$router.push({path: "/dashboard"})
+          this.$router.push({path: "/dashboardlembaga/"+this.userAdmin[0].id})
         }
         }
     },

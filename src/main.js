@@ -7,6 +7,7 @@ Vue.config.productionTip = false
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import '../src/assets/css/main.css'
+import '../src/assets/css/cssdetailevents.css'
 
 Vue.use(BootstrapVue)
 Vue.use(BootstrapVueIcons)

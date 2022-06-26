@@ -12,6 +12,8 @@ import detailEvent from '../views/eventdetail.vue'
 import eventuai from '../views/eventUAI.vue'
 import eventOrmawa from '../views/eventOrmawa.vue'
 import eventUkkm from '../views/eventUkkm.vue'
+import loginLembaga from '../views/loginLembaga.vue'
+import DashboardViewLembaga from '../views/DashboardViewLembaga.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -26,7 +28,12 @@ const routes = [
     component:Dashboardview
   },
   {
-    path:'/inputpost',
+    path:'/dashboardlembaga/:lembagaId',
+    name: 'dashboard',
+    component:DashboardViewLembaga
+  },
+  {
+    path:'/inputpost/:lembagaId',
     name: 'inputpost',
     component:inputPostView
   },
@@ -74,6 +81,11 @@ const routes = [
     path:'/login',
     name: 'login-admin',
     component:loginadmin
+  },
+  {
+    path:'/loginlembaga',
+    name: 'login-lembaga',
+    component:loginLembaga
   },
 ]
 

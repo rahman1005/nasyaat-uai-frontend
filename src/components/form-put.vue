@@ -51,7 +51,7 @@
     </div>
             <div class="mb-3">
       <label for="formGroupExampleInput2" class="form-label"
-        >Waktu</label
+        >Waktu Mulai</label
       >
       <input
         type="time"
@@ -64,7 +64,7 @@
     </div>
     <div class="mb-3">
       <label for="formGroupExampleInput2" class="form-label"
-        >Waktu</label
+        >Waktu Selesai</label
       >
       <input
         type="time"
@@ -193,7 +193,7 @@ export default {
         },
       })
       alert("data berhasil disimpan")
-        this.$router.push({path: "/dashboard"})
+        this.$router.push({path: "/dashboardlembaga/"+this.events.lembagaId})
     }else{
         alert("data tdak boleh kosong")
     }
@@ -203,7 +203,7 @@ export default {
     },
     mounted(){
         axios
-        .get("http://localhost:5000/events/" )
+        .get("http://localhost:5000/events/"+this.$route.params.id)
         .then((response)=> this.setEvent(response.data))
         .catch((error)=>console.log(error));
         console.warn(this.events);
