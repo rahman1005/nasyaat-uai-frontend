@@ -9,7 +9,7 @@
            <div class="container-box-item">
              <div class="box-item">
                 <div>
-                    <img src="../assets/img/f1.png" alt="">
+                    <img src="../assets/img/Icon Kalender.png" alt="">
                 </div>
                 <div>
                     <h3>{{events.tanggal}}</h3>
@@ -17,7 +17,7 @@
             </div>
              <div class="box-item">
                 <div>
-                    <img src="../assets/img/f1.png" alt="">
+                    <img src="../assets/img/Icon Location 2.png" alt="">
                 </div>
                  <div>
                     <h3>{{events.tempat}}</h3>
@@ -25,18 +25,34 @@
             </div>
              <div class="box-item">
                 <div>
-                    <img src="../assets/img/f1.png" alt="">
+                    <img src="../assets/img/Icon jam.png" alt="">
                 </div>
                  <div>
-                    <h3>{{events.waktu_mulai}}</h3>
+                    <h3>{{events.waktu_mulai}} WIB</h3>
                 </div>
             </div>
              <div class="box-item">
                 <div>
-                    <img src="../assets/img/f1.png" alt="">
+                    <img src="../assets/img/Icon Jam 2.png" alt="">
                 </div>
                  <div>
-                    <h3>{{events.waktu_selesai}}</h3>
+                    <h3>{{events.waktu_selesai}} WIB</h3>
+                 </div>
+            </div>
+            <div class="box-item1">
+                 <div>
+                    <img src="../assets/img/Logo Instagram.png" alt="">
+                </div>
+                 <div>
+                   <a :href="events.link_instagram" target="_blank"><h3> Instagram</h3></a>
+                 </div>
+            </div>
+            <div class="box-item1">
+                 <div>
+                    <img src="../assets/img/icon Daftar biru.png" alt="">
+                </div>
+                 <div>
+                   <a :href="events.link_pendaftaran" target="_blank"><h3> Daftar</h3></a>
                  </div>
             </div>
            </div>
