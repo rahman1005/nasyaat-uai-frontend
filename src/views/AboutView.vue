@@ -8,14 +8,8 @@
   <center><img src="../assets/img/nasyaatuai.png"></center>
   <br/>
       <div class="about-us-item">
-      <p><center>How Nasyaat UAI came to be</center><br/><br/>
-      Nasyaat UAI muncul dikarenakan banyak event di Universitas Al-Azhar Indonesia yang tidak tersampaikan secara maksimal kepada masyarakat Universitas Al-Azhar Indonesia,
-      yang disebabkan tidak adanya tempat khusus untuk mengiklankan event tersebut. <br/><br/>
-      Nasyaat UAI hadir guna membantu menyelesaikan masalah tersebut. Nasyaat UAI adalah sebuah  platform yang dapat mewadahi  semua event di lingkup Universitas Al-Azhar Indonesia meliputi event yang diselenggarakan oleh Universitas Al-Azhar itu sendiri, event yang diselenggarakan oleh Organisasi Mahasiswa Universitas Al-Azhar Indonesia,
-      serta event yang diselenggarakan oleh UKKM UAI.<br/><br/>
-      Nasyaat UAI juga memudahkan penyelenggara dalam mempromosikan event mereka. Dengan adanya Nasyaat UAI ini,
-      seluruh mahasiswa Universitas Al-Azhar Indonesia dapat dengan mudah mencari serta mendaftar pada event yang ingin mereka ikuti.
-      </p>
+      <p v-for="about in about.aboutUs" :key="about.id"><center>How Nasyaat UAI came to be</center><br/><br/>
+        {{about.deskripsi}} </p>
 
       </div>
 </div>
@@ -24,12 +18,29 @@
 
 <script>
 import Navbar from '@/components/Navbar.vue'
+import axios from "axios";
 export default {
   name: 'About-Us',
   components:{
     Navbar,
+  },
+data(){
+  return{
+    about:{}
   }
+},
+methods:{
+  setData(data){
+  this.about=data
+},
+},
 
+mounted(){
+  axios
+  .get("http://localhost:5000/aboutus")
+  .then((response)=> this.setData(response.data))
+  .catch((error) => console.log(error));
+}
 }
 </script>
 

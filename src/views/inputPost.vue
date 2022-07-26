@@ -195,7 +195,7 @@ export default {
         let fd = new FormData();
         fd.append("Image", this.Image);
         fd.append("lembagaId",this.lembagas[0].id);
-        fd.append("CategoryId", this.lembagas[0].CategoryId);
+        fd.append("CategoryId", this.lembagas[0].categoryId);
         fd.append("nameEvent", this.event.nameEvent);
         fd.append("lembagaName", this.event.lembagaName);
         fd.append("link_pendaftaran", this.event.link_pendaftaran);

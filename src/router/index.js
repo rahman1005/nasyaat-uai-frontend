@@ -14,6 +14,8 @@ import eventOrmawa from '../views/eventOrmawa.vue'
 import eventUkkm from '../views/eventUkkm.vue'
 import loginLembaga from '../views/loginLembaga.vue'
 import DashboardViewLembaga from '../views/DashboardViewLembaga.vue'
+import formPostAbout from '../views/form-aboutUs.vue'
+import PutLembaga from '../views/put-lembaga.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -86,6 +88,16 @@ const routes = [
     path:'/loginlembaga',
     name: 'login-lembaga',
     component:loginLembaga
+  },
+  {
+    path:'/formabout',
+    name: 'form-about',
+    component:formPostAbout
+  },
+  {
+    path:'/putlembaga/:id',
+    name: 'put-lembaga',
+    component:PutLembaga
   },
 ]
 

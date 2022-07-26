@@ -1,6 +1,8 @@
 <template>
-
-  <div class="input-lembaga" v-on:submit.prevent>
+   <div class="put-event">
+        <main class="form">
+            <h1>Edit Event</h1>
+              <div class="input-lembaga" v-on:submit.prevent>
     <div>
         <label for="formGroupExampleInput" class="form-label">Category</label>
     </div>
@@ -40,7 +42,7 @@
         >Email Lembaga</label
       >
       <input
-        type="email"
+        type="text"
         class="form-control"
         id="formGroupExampleInput2"
         placeholder="nasyaat@gmail.com"
@@ -54,12 +56,12 @@
         type="password"
         class="form-control"
         id="formGroupExampleInput2"
-       
+        placeholder=""
         v-model="lembaga.password"
         required
       />
     </div>
-       <div class="mb-3">
+     <div class="mb-3">
       <label for="formGroupExampleInput2" class="form-label">Konfirmasi Password</label>
       <input
         type="password"
@@ -70,16 +72,18 @@
         required
       />
     </div>
-    <button type="button" class="btn btn-primary" @click=" confirmasipassword">
+    <button type="button" class="btn btn-primary" @click="confirmasipassword">
       Simpan
     </button>
+  </div>
+        </main>
   </div>
 </template>
 
 <script>
 import axios from "axios";
 export default {
-  name: "input-lembaga",
+  name: "put-lembaga",
 
   data() {
     return {
@@ -88,7 +92,8 @@ export default {
       lembagaName:null,
       categoryId:null,
       emailLembaga:null,
-      password:null
+      password:null,
+      confpassword:null
 
       },
     };
@@ -97,7 +102,7 @@ export default {
     setCategory(data) {
       this.categorys = data;
     },
-     confirmasipassword(){
+    confirmasipassword(){
         if(this.lembaga.password!=this.lembaga.confpassword){
             alert("Password dan Konfirmasi Password tidak sama.")
         }else{
@@ -109,13 +114,14 @@ export default {
       this.lembaga.categoryId &&
       this.lembaga.emailLembaga &&
       this.lembaga.password !=null){
-      axios.post("http://localhost:5000/lembaga",this.lembaga);
+      axios.put("http://localhost:5000/lembaga/"+this.$route.params.id, this.lembaga);
           alert("data berhasil disimpan")
           this.$router.push({path: "/dashboard"})
       } else{
         alert("data tdak boleh kosong")
     }
       console.warn(this.lembaga);
+    
  
     },
   },

@@ -411,6 +411,22 @@ height: calc(100% - 73px);
   margin-top: 20px;
   color: red;
 }
+
+/* aboutus */
+.daftarlembaga{
+  text-align: center;
+  margin-top: 40px;
+  color: #082A5A;
+}
+.action-table{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 50%;
+  margin: 0 auto;
+}
+.action-l{
+  text-align: center;
+}
 @media (max-width: 450px) {
 .h-custom {
 height: 100%;
@@ -445,8 +461,10 @@ border-radius: 10px;
 width: 90%;
 margin: 30px auto;
 }
-  
+
 }
+
+
 @media screen and ( max-width: 699px){
   .Hero h1{
        font-size: 30px;
