@@ -99,7 +99,7 @@ nav a:hover {
 }
 .list-item-event{
   display: grid;
-  grid-template-columns: 1fr 4fr 1fr 1fr;
+  grid-template-columns: 2fr 2fr 2fr 1fr 1fr;
   background-color: #eaeaea;
   margin-top: 5px  ;
   color: #082A5A;
@@ -420,7 +420,7 @@ height: calc(100% - 73px);
 }
 .action-table{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   width: 50%;
   margin: 0 auto;
 }

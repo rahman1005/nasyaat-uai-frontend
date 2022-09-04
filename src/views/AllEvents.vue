@@ -33,7 +33,7 @@ export default {
     },
     mounted(){
         axios
-        .get("http://localhost:5000/events")
+        .get("http://localhost:5000/eventsconfirm")
         .then((response)=> this.setEvents(response.data))
         .catch((error)=> console.log(error));
 

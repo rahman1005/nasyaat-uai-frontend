@@ -16,6 +16,9 @@ import loginLembaga from '../views/loginLembaga.vue'
 import DashboardViewLembaga from '../views/DashboardViewLembaga.vue'
 import formPostAbout from '../views/form-aboutUs.vue'
 import PutLembaga from '../views/put-lembaga.vue'
+import eventNotConfirmSadmin from '../views/eventNotConfirmSadmin.vue'
+import eventConfirmSadmin from '../views/eventConfirmSadmin.vue'
+import eventDeniedSadmin from '../views/eventDeniedSadmin.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -99,6 +102,22 @@ const routes = [
     name: 'put-lembaga',
     component:PutLembaga
   },
+  {
+    path:'/eventnotconfirmSadmin',
+    name: 'put-lembaga',
+    component:eventNotConfirmSadmin
+  },
+  {
+    path:'/eventconfirmSadmin',
+    name: 'put-lembaga',
+    component:eventConfirmSadmin
+  },
+  {
+    path:'/eventdeniedSadmin',
+    name: 'put-lembaga',
+    component:eventDeniedSadmin
+  },
+
 ]
 
 const router = new VueRouter({

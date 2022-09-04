@@ -1,7 +1,7 @@
 <template>
     <div class="event">
         <Navbar/>
-        <h1>Events UAI</h1>
+        <h1>Events UKKM</h1>
         <div class= "Card row ">
             <div class="card-list col-md-3 mt-4 "  v-for="event in events.events" :key="event.id">
                 <Card :event="event"/>

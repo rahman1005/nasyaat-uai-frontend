@@ -164,6 +164,7 @@ export default {
         waktu_selesai: null,
         tempat: null,
         deskripsi: null,
+        statusId: 1,
       },
     };
   },
@@ -205,6 +206,7 @@ export default {
         fd.append("waktu_selesai", this.event.waktu_selesai);
         fd.append("tempat", this.event.tempat);
         fd.append("deskripsi", this.event.deskripsi);
+        fd.append("statusId", this.event.statusId);
 
         axios.post("http://localhost:5000/events", fd, {
           headers: {

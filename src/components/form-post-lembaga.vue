@@ -88,7 +88,8 @@ export default {
       lembagaName:null,
       categoryId:null,
       emailLembaga:null,
-      password:null
+      password:null,
+      statusId:1
 
       },
     };

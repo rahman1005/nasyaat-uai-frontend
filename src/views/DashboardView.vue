@@ -42,6 +42,9 @@
   </tbody>
 </table>
       </div>
+  
+      
+   
     </main>
   </div>
 </template>
@@ -57,7 +60,15 @@ export default {
   data(){
     return{
       lembagas:{
-
+    },
+    statusLembaga:{
+      status:null
+    },
+    lembagaNonAktif:{
+      statusId:2
+    },
+     lembagaAktif:{
+      statusId:2
     }
     }
   },
@@ -83,7 +94,8 @@ export default {
             .then((response)=> this.setData(response.data));
       }
 
-    }
+    },
+   
 
 
   },

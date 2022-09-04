@@ -27,18 +27,22 @@ export default {
    data(){
         return{
             events:{},
+            status:{}
         };
     },
     methods:{
         setEvents(data){
             this.events=data;
         },
+        setStatus(data){
+          this.status=data
+        },
          Delete(id){
           axios
           .delete("http://localhost:5000/events/"+id)
           .then(()=>{
             axios
-            .get("http://localhost:5000/events")
+            .get("http://localhost:5000/eventslembaga/"+this.$route.params.lembagaId)
             .then((response)=> this.setEvents(response.data));
 
         })
